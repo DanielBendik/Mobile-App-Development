@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.niu.z1938845.tipcalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/label_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="120dp"
+        android:text="@string/label_bill"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/amount_bill"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/label_bill"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="99dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginBottom="-9dp"
+        android:layout_toRightOf="@+id/label_bill"
+        android:hint="@string/amount_bill_hint"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_bill"
+        app:layout_constraintLeft_toRightOf="@+id/label_bill"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/label_tip_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_bill"
+        android:layout_alignLeft="@+id/label_bill"
+        android:layout_alignRight="@+id/label_bill"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginRight="-3dp"
+        android:text="@string/label_tip_percent"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="@+id/label_bill"
+        app:layout_constraintRight_toRightOf="@+id/label_bill"
+        app:layout_constraintTop_toBottomOf="@+id/label_bill" />
+
+    <EditText
+        android:id="@+id/amount_tip_percent"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/label_tip_percent"
+        android:layout_alignRight="@id/amount_bill"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="-4dp"
+        android:layout_marginBottom="-182dp"
+        android:layout_toRightOf="@+id/label_tip_percent"
+        android:hint="@string/amount_tip_percent_hint"
+        android:inputType="number"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_tip_percent"
+        app:layout_constraintLeft_toRightOf="@+id/label_tip_percent"
+        app:layout_constraintRight_toRightOf="@id/amount_bill" />
+
+</RelativeLayout>
